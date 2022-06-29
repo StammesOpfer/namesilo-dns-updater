@@ -10,7 +10,8 @@ Modified by: Matthew Reishus (2019-08-14)
 
 Modified by: StammesOpfer (2022-06-28)
 
-Updated to remove requirment to install request module.
+Updated to remove requirement to install request module.
+Tested against pfsense 2.6
 
 # Instructions
 1. Update file with you domain info and NameSilo api key.
