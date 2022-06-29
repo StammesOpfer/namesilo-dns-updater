@@ -1,4 +1,5 @@
-#!/usr/bin/env python3.?
+#!/usr/bin/env python3.8
+# May need to update python version 3.8 is current as of pfsense 2.6
 
 # Quick and dirty script to update a DNS record on NameSilo based on current IP address
 # Originally from: http://vivithemage.com/2018/09/17/namesilo-dns-update-via-python-script-and-cron-job-on-pfsense/
@@ -24,11 +25,11 @@ RECORD_IP_ADDRESS_URL  = 'https://www.namesilo.com/api/dnsListRecords?version=1&
 CURRENT_IP_ADDRESS_URL = 'http://whatismyip.akamai.com/'
 
 # get current IP address
-current = subprocess.check_output(['curl', '-L', CURRENT_IP_ADDRESS_URL]).decode("utf-8")
+current = subprocess.check_output(['curl', '-sL', CURRENT_IP_ADDRESS_URL]).decode("utf-8")
 
 
 # look up domain records from namesilo
-r = subprocess.check_output(['curl', '-L', RECORD_IP_ADDRESS_URL])
+r = subprocess.check_output(['curl', '-s', RECORD_IP_ADDRESS_URL])
 xml = ET.fromstring(r)
 
 for record in xml.iter('resource_record'):
