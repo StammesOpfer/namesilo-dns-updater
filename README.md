@@ -14,5 +14,5 @@ Updated to remove requirment to install request module.
 
 # Instructions
 1. Update file with you domain info and NameSilo api key.
-2. Upload it via "Diagnostics > Command Prompt" to your pfsense and run "chmod +x" on it.
+2. Upload it via "Diagnostics > Command Prompt" to your pfsense and run `chmod +x` on it.
 3. Install the cron add-on and schdule a job to run the script.
