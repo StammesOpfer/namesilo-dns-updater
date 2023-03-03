@@ -1,5 +1,6 @@
-#!/usr/bin/env python3.8
-# May need to update python version 3.8 is current as of pfsense 2.6
+#!/usr/bin/env python3.11
+# May need to edit python version 3.8 is current as of pfsense 2.6
+# pfSense 23.01 is python3.11
 
 # Quick and dirty script to update a DNS record on NameSilo based on current IP address
 # Originally from: http://vivithemage.com/2018/09/17/namesilo-dns-update-via-python-script-and-cron-job-on-pfsense/
